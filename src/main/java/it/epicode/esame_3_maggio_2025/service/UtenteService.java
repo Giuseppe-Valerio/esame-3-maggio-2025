@@ -20,9 +20,9 @@ public class UtenteService {
         return new UtenteDTO(savedUtente.getId(), savedUtente.getUsername(), savedUtente.getRuolo().name());
     }
 
-    public UtenteDTO trovaPerUsername(String username) {
-        Utente utente = utenteRepository.findByUsername(username)
+    public Utente trovaPerUsername(String username) {
+        return utenteRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("Utente non trovato"));
-        return new UtenteDTO(utente.getId(), utente.getUsername(), utente.getRuolo().name());
     }
+
 }
