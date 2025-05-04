@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class EventoDTO {
 
+
     private Long id;
     private String titolo;
     private String descrizione;
